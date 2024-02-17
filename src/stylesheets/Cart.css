@@ -1,0 +1,221 @@
+.CartWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.CartMain{
+    width: 70%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #321E1E;
+}
+.CartHead{
+    width: 90%;
+    height: 60px;
+    font-size: xx-large;
+    background-color: #7E1717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ddd;
+}
+.CartItem{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.CartCard{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #FFF5B8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+}
+.CartImgWrapper{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CartImg{
+    cursor: pointer;
+    width: 55%;
+    height: 60%;
+    border: 1px solid #321E1E;
+}
+.CartCardMain{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.CartCardMainTitle{
+    cursor: pointer;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #321E1E;
+    font-size: x-large;
+    text-align: center;
+    font-weight: 600;
+    height: 70px;
+}
+.CartCardMainBody{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+}
+.CartCardMainBodyHead{
+    font-size: x-large;
+    color: #321E1E;
+}
+.CartCardMainBodyValue{
+    font-size: x-large;
+    color: #321E1E;
+    margin-left: 20px;
+}
+.CartCardMainBodyInput{
+    width: 120px !important;
+    height: 30px;
+    text-align: end;
+    margin-left: 20px;
+    background-color: #00DFA2 !important;
+}
+.CartCardMainBodyBtn{
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #321E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: larger;
+}
+.CartCardMainBodyBtn:hover{
+    background-color: #321e1eeb;
+}
+.CartBill{
+    width: 25%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.CartBillTitle{
+    width: 100%;
+    background-color: #7E1717;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: xx-large;
+}
+.CartBillDetails{
+    width: 100%;
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 15px;
+    /* background-color: #E2F6CA; */
+    height: 50px;
+    align-items: center;
+}
+.CartBillDetailsTitle{
+    font-size: x-large;
+    color: #321E1E;
+}
+.CartBillDetailsValue{
+    font-size: xx-large;
+    color: #321E1E;
+    margin-left: 10px;
+}
+.CartBillWrap{
+    width: 100%;
+    margin-top: 20px;
+    background-color: #E9FFC2;
+}
+.CartBillDetail{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #E9FFC2;
+    height: 60px;
+}
+.CartBillDetailsInput{
+    width: 70%;
+    height: 30px;
+    font-size: x-large;
+    border: none;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #321E1E;
+    border: 1px solid #321E1E;
+}
+.CartBillDetailsInput:focus{
+    outline: none;
+}
+.CartBillDetailsBtn{
+    width: 20%;
+    height: 33px;
+    background-color: #321E1E;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+.CartBillDetailsBtn:hover{
+    background-color: #321e1eeb;
+}
+.CartBillBtnWrapper{
+    width: 98%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0px;
+    height: 60px;
+}
+.CartBillBtn{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #321E1E;
+    cursor: pointer;
+    color: #fff;
+    font-size: larger;
+}
+.CartBillBtn:hover{
+    background-color: #321e1eeb;
+}
+.coupon-code-message{
+    font-size: large;
+    color: #3F2305;
+    margin-top: 5px;
+}

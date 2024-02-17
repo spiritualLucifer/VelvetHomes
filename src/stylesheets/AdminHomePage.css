@@ -1,0 +1,379 @@
+.AdminLoadercon{
+    width: 100%;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AdminLoader{
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+}
+.AdminLoaderText{
+    font-size: 40px;
+    color: #071952;
+    margin-top: 25px;
+}
+.FullPage{
+    width: 100%;
+    height: 100%;
+}
+.AdminHomePage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AdminAdvertise{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1D5D9B;
+    height: 120px;
+    border-bottom: 3px solid gold;
+    transition: height 0.5s;
+}
+.AdminAdvertise img{
+    height: 70px;
+    width:  100px;
+    border: 1.5px solid aliceblue;
+    border-radius: 3px;
+}
+.AdminBrandName{
+    color: #fff;
+    font-size: larger;
+    margin-left: 10px;
+}
+.AdminBrandName span{
+    font-size: xx-large;
+}
+.AdminHomeMainContent{
+    width: 100%;
+    height: 600px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: height 0.5s;
+}
+.AdminHomeMainContent::-webkit-scrollbar{
+    display: none;
+}
+.CHPImgCon{
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+}
+.CompDetails{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.CHPcard{
+    background-color: #A7EDE7;
+    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+    height: 175px;
+    width: 250px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.CHPcardMain{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.CHPImage{
+    width: 90px;
+    height: 40px;
+    z-index: 6666;
+}
+.CHPcardMainDivTitle{
+    font-size: xx-large;
+    color: #3F2305;
+    margin-left: 5px;
+}
+.CHPcardMainDiv{
+    width: 98%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.CHPcardMainDivHead{
+    font-size: x-large;
+    margin-left: 5px;
+    color: #482121;
+}
+.CHPcardMainDivValue{
+    font-size: larger;
+    margin-left: 4px;
+    color: #7A3E3E;
+}
+.CHPcardCon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.CHPcardMainDivTitleAdd{
+    width: 95%;
+    font-size: large;
+    color: green;
+    text-align: end;
+}
+.CompTrackSalesHead{
+    width: 350px;
+    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+    border-bottom: 5px double #F9E0BB;
+    border-right: 2px solid #F9E0BB;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #0E2954;
+    display: flex;
+    text-decoration: underline;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.SalesChartsCon{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.SalesChartConDiv{
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #A7EDE7;
+    border-radius: 10px;
+    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+}
+.AdminHomeCardSales{
+    width: 275px;
+    min-height: 400px;
+    background-color: #A7EDE7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 15px 17px 20px rgba(0,0,0,0.5);
+}
+.AdminHomeCardDispImg{
+    width: 100%;
+    height: 225px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.AdminHomeCardMain{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 175px;
+}
+.AdminHomeCardDiv{
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    color: #222;
+}
+.AdminHomeCardDivTitle{
+    font-size: large;
+    color: #333;
+}
+.AdminHomeCardDivValue{
+    font-size: medium;
+    margin-left: 5px;
+    color: #555;
+}
+.MostAndLeastSellingCon{
+    width: 98%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #555;
+}
+.MostSellingCon{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.LeastSellingCon{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-left: 1px solid #555;
+}
+.AdminHomeForm{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #e3f4f465;
+    padding-left: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 15px #e3f4f4d2;
+}
+.AdminInputCon{
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.AdminInputLabel{
+    font-size: x-large;
+    color: #482121;
+}
+.AdminHomeNumber{
+    width: 60px;
+}
+.AdminHomeText{
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: #E3F4F4;
+    text-align: center;
+}
+.AdminHomeText:focus{
+    outline: none;
+}
+.AdminInputBtnCon{
+    width: 70%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.AdminInputBtn{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3F2305;
+    color: #fff;
+    font-size: larger;
+    transition: background-color 0.5s;
+    border: none;
+}
+.AdminInputBtn:hover{
+    background-color: #3f2305cf;
+}
+.CHPcardBtn{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3F2305;
+    color: #fff;
+    font-size: larger;
+    transition: background-color 0.5s;
+    border: none;
+}
+.CHPcardBtn:hover{
+    background-color: #3f2305d6;
+    margin-bottom: 10px;
+}
+.AdminAllCustomersSearchBar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AdminAllCustomersSearchInput{
+    width: 500px;
+    height: 30px;
+    border-radius: 5px;
+    color: #3F2305;
+    font-size: 20px;
+    border: 2px solid #3F2305;
+}
+.AdminAllCustomersSearchInput:focus{
+    outline: none;
+}
+.AdminAllCustomersSearchBtn{
+    height: 34px;
+    width: 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F2305;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #fff;
+    font-size: larger;
+    transition: background-color 0.5s;
+}
+.AdminAllCustomersSearchBtn:hover{
+    background-color: #633e16;
+}
+.AdminAllCustomersMain{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.AdminAllCustomersNotFound{
+    font-size: xx-large;
+    color: #482121;
+}
+.AdminTitle{
+    font-size: xx-large;
+    margin-right: 10px;
+    color: #3F2305;
+}
+.AdminAllCompaniesBtn{
+    width: 90%;
+    font-size: larger;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #333;
+}

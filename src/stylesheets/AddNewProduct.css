@@ -1,0 +1,134 @@
+.cnp-body-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('https://www.technocrazed.com/wp-content/uploads/2015/12/Home-Wallpaper-15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+}
+.cnp-body-form{
+    width: 60%;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: #e3f4f465;
+    padding-left: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 15px #e3f4f4d2;
+}
+.cnp-wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px;
+}
+.cnp-wrapper label{
+    font-size: x-large;
+    color: #884A39;
+    margin-bottom: 5px;
+}
+.cnp-wrapper input[type= 'text']{
+    width: 80%;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 3px;
+    background-color: #E3F4F4;
+}
+.cnp-wrapper input[type= 'text']:focus{
+    outline: none;
+}
+.cnp-feature{
+    width: 100%;
+}
+.cnp-key{
+    width: 40% !important;
+    margin-right: 2%;
+}
+.cnp-value{
+    width: 40% !important;
+    margin-left: 2%;
+}
+#cnp-desc{
+    width: 80%;
+    height: 70px;
+    border: none;
+    background-color: #E3F4F4;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #0E2954;
+}
+#cnp-desc:focus{
+    outline: none;
+    font-size: 20px;
+}
+.cnpTextWrapperIcon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 94%;
+    margin-bottom: 3px;
+}
+.cnp-icons{
+    height: 26px;
+    background-color: #E3F4F4;
+    margin-left: 0;
+    cursor: pointer;
+}
+.cnp-input-icon{
+    border: none;
+}
+.cnpAddNewBox{
+    width: 50px;
+    height: 30px;
+    background-color: #3C2317;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+input{
+    border: none;
+}
+input[type= 'number']{
+    background-color: #E3F4F4;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #0E2954;
+}
+input[type= 'number']:focus{
+    outline: none;
+}
+select{
+    background-color: #E3F4F4;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #0E2954;
+}
+select:focus{
+    outline: none;
+}
+option{
+    border-radius: 5px;
+}
+.cnp-btn{
+    width: 150px;
+    height: 50px;
+    margin-bottom: 25px;
+    background-color: #3C2317;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: large;
+    cursor: pointer;
+}
+.cnp-btn:hover{
+    background-color: #3c2317eb;
+}
