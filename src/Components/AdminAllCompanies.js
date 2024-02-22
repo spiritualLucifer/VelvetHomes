@@ -1,6 +1,8 @@
+
 import React, { useEffect, useState } from 'react'
 import logo from "./logo.jpeg"
 import "../stylesheets/AdminHomePage.css"
+import loader from '../Pictures/loader.gif'
 
 export default function AdminAllCompanies() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +53,7 @@ export default function AdminAllCompanies() {
     return (
         <div className='AdminHomePage'>
             {showLoader ? <div className="AdminLoadercon">
-                <img src='https://i.gifer.com/70bm.gif' alt='' className='AdminLoader' />
+                <img src={loader} alt='' className='AdminLoader' />
                 <span className='AdminLoaderText'>
                     Velvet Home's Companies are Loading...
                 </span>

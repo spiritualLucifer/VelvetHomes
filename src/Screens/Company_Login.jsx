@@ -66,7 +66,7 @@ export default function Company_Login({ show }) {
   // Css Properties Which differ the buttons In Order To Show Which Form is Selected Login or SignUp
   const selectedStyle = {
     height: "60px",
-    backgroundColor: "#ff7c54e2",
+    backgroundColor: "gray",
     borderBottomLeftRadius: "0",
     borderBottomRightRadius: "0",
   };
@@ -225,7 +225,7 @@ export default function Company_Login({ show }) {
           <div className="btns-company-login">
             <div
               className="btn-company-login"
-              style={val === "Login" ? selectedStyle : { height: "50px" }}
+              style={val === "Login" ? selectedStyle : { height: "50px",backgroundColor:"#4d4d4d" }}
               onClick={() => setVal("Login")}
             >
               Sign In
@@ -245,8 +245,8 @@ export default function Company_Login({ show }) {
                   className="input-company-wrapper"
                   style={{ marginTop: "25px" }}
                 >
-                  <label className="input-clf-label" style={{ color: "red" }}>
-                    **Please Login To Continue Your Shopping
+                  <label className="input-clf-label" style={{ color: "black" }}>
+                    Please Login To Continue Your Shopping
                   </label>
                 </div>
               )}
@@ -266,8 +266,8 @@ export default function Company_Login({ show }) {
                   onChange={handleLoginChange}
                   style={
                     isValidInput.username
-                      ? { color: "#1A5D1A", borderBottom: "3px solid #1A5D1A" }
-                      : { color: "red", borderBottom: "3px solid red" }
+                      ? { color: "#1A5D1A", borderBottom: "1px solid #1A5D1A" }
+                      : { color: "red", borderBottom: "1px solid red" }
                   }
                 />
                 <div
@@ -310,12 +310,12 @@ export default function Company_Login({ show }) {
                       isValidInput.password
                         ? {
                             color: "#1A5D1A",
-                            borderBottom: "3px solid #1A5D1A",
+                            borderBottom: "1px solid #1A5D1A",
                             width: "82%",
                           }
                         : {
                             color: "red",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             width: "82%",
                           }
                     }
@@ -338,9 +338,9 @@ export default function Company_Login({ show }) {
                             cursor: "pointer",
                           }
                         : {
-                            height: "27px",
+                            height: "25px",
                             width: "8%",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             backgroundColor: "#ffffffae",
                             marginTop: "5px",
                             cursor: "pointer",
@@ -360,11 +360,11 @@ export default function Company_Login({ show }) {
                   }}
                 >
                   {isValidInput.password ? (
-                    <div style={{ color: "#1A5D1A", fontWeight: "600" }}>
+                    <div style={{ color: "#1A5D1A", fontWeight: "400" }}>
                       Seems Good
                     </div>
                   ) : (
-                    <div style={{ color: "red" }}>Invalid Input</div>
+                    <div style={{ color: "red" ,fontWeight: "100"}}>Invalid Input</div>
                   )}
                 </div>
               </div>
@@ -395,8 +395,8 @@ export default function Company_Login({ show }) {
                 className="input-company-wrapper"
                 style={{ marginTop: "25px" }}
               >
-                <label className="input-clf-label" style={{color: "red"}}>
-                  **Please SignUp To Continue Your Shopping
+                <label className="input-clf-label" style={{color: "black" , marginTop:"20px"}}>
+                  Please SignUp To Continue Your Shopping
                 </label>
               </div>}
               <div
@@ -415,8 +415,8 @@ export default function Company_Login({ show }) {
                   onChange={handleSignUpChange}
                   style={
                     isValidSignupInput.companyname
-                      ? { color: "#1A5D1A", borderBottom: "3px solid #1A5D1A" }
-                      : { color: "red", borderBottom: "3px solid red" }
+                      ? { color: "#1A5D1A", borderBottom: "1px solid #1A5D1A" }
+                      : { color: "red", borderBottom: "1px solid red" }
                   }
                 />
                 <div
@@ -461,8 +461,8 @@ export default function Company_Login({ show }) {
                   onChange={handleSignUpChange}
                   style={
                     isValidSignupInput.email
-                      ? { color: "#1A5D1A", borderBottom: "3px solid #1A5D1A" }
-                      : { color: "red", borderBottom: "3px solid red" }
+                      ? { color: "#1A5D1A", borderBottom: "1px solid #1A5D1A" }
+                      : { color: "red", borderBottom: "1px solid red" }
                   }
                 />
                 <div
@@ -505,12 +505,12 @@ export default function Company_Login({ show }) {
                       isValidSignupInput.password
                         ? {
                             color: "#1A5D1A",
-                            borderBottom: "3px solid #1A5D1A",
+                            borderBottom: "1px solid #1A5D1A",
                             width: "82%",
                           }
                         : {
                             color: "red",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             width: "82%",
                           }
                     }
@@ -527,15 +527,15 @@ export default function Company_Login({ show }) {
                         ? {
                             height: "27px",
                             width: "8%",
-                            borderBottom: "3px solid #1A5D1A",
+                            borderBottom: "1px solid #1A5D1A",
                             backgroundColor: "#ffffffae",
                             marginTop: "5px",
                             cursor: "pointer",
                           }
                         : {
-                            height: "27px",
+                            height: "25px",
                             width: "8%",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             backgroundColor: "#ffffffae",
                             marginTop: "5px",
                             cursor: "pointer",
@@ -594,12 +594,12 @@ export default function Company_Login({ show }) {
                       isValidSignupInput.confirmPassword
                         ? {
                             color: "#1A5D1A",
-                            borderBottom: "3px solid #1A5D1A",
+                            borderBottom: "1px solid #1A5D1A",
                             width: "82%",
                           }
                         : {
                             color: "red",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             width: "82%",
                           }
                     }
@@ -622,9 +622,9 @@ export default function Company_Login({ show }) {
                             cursor: "pointer",
                           }
                         : {
-                            height: "27px",
+                            height: "25px",
                             width: "8%",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             backgroundColor: "#ffffffae",
                             marginTop: "5px",
                             cursor: "pointer",

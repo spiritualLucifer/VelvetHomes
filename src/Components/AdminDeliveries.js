@@ -1,6 +1,8 @@
+
 import React, { useEffect, useState } from 'react'
 import logo from "./logo.jpeg"
 import "../stylesheets/AdminHomePage.css"
+import loader from '../Pictures/loader.gif'
 
 export default function AdminDeliveries() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -77,7 +79,7 @@ export default function AdminDeliveries() {
     return (
         <div className='AdminHomePage'>
             {showLoader ? <div className="AdminLoadercon">
-                <img src='https://i.gifer.com/70bm.gif' alt='' className='AdminLoader' />
+                <img src={loader} alt='' className='AdminLoader' />
                 <span className='AdminLoaderText'>
                     Velvet Home's Delivery Page Is Loading...
                 </span>
@@ -181,3 +183,4 @@ export default function AdminDeliveries() {
         </div>
     )
 }
+

@@ -67,7 +67,7 @@ const CustomerLogin = ({show}) => {
   // Css Properties Which differ the buttons In Order To Show Which Form is Selected Login or SignUp
   const selectedStyle = {
     height: "60px",
-    backgroundColor: "#ff7c54e2",
+    backgroundColor: "gray",
     borderBottomLeftRadius: "0",
     borderBottomRightRadius: "0",
   };
@@ -98,11 +98,12 @@ const CustomerLogin = ({show}) => {
   // Function To handle OnSubmit event of login form
   async function handleLoginSubmit(evt) {
     evt.preventDefault();
-    const val = Object.values(isValidInput).every((value) => value === true);
-    if (val) {
-      const response = await fetch(
-        "http://localhost:5000/velvethomes/customer/login",
-        {
+  
+    try {
+      const val = Object.values(isValidInput).every((value) => value === true);
+  
+      if (val) {
+        const response = await fetch("http://localhost:5000/velvethomes/customer/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -111,22 +112,33 @@ const CustomerLogin = ({show}) => {
             username: compStateLogin.username,
             password: compStateLogin.password,
           }),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
-      );
-      const json = await response.json();
-      if (!json.success) {
-        setWrongInput(true);
-        setIsValidInput({ ...isValidInput, username: false, password: false });
+  
+        const json = await response.json();
+  
+        if (!json.success) {
+          setWrongInput(true);
+          setIsValidInput({ ...isValidInput, username: false, password: false });
+        }
+  
+        if (json.success) {
+          localStorage.setItem("customerUsername", compStateLogin.username);
+          dispatch(loginCustomer());
+          navigate("/");
+        }
+      } else {
+        alert("Enter All Valid Entries");
       }
-      if (json.success) {
-        localStorage.setItem("customerUsername", compStateLogin.username);
-        dispatch(loginCustomer());
-        navigate("/");
-      }
-    } else {
-      alert("Enter All Valid Enteries");
+    } catch (error) {
+      console.error("Error during fetch:", error);
+      // Add more detailed error handling here
     }
   }
+  
   // Function to handle the changes done in the SignUp Form
   const handleSignUpChange = (evt) => {
     setEmailUsed(false);
@@ -234,7 +246,7 @@ const CustomerLogin = ({show}) => {
                 className="input-company-wrapper"
                 style={{ marginTop: "25px" }}
               >
-                <label className="input-clf-label" style={{color: "red"}}>
+                <label className="input-clf-label" style={{color: "black"}}>
                   **Please Login To Continue Your Shopping
                 </label>
               </div>}
@@ -383,7 +395,7 @@ const CustomerLogin = ({show}) => {
                 className="input-company-wrapper"
                 style={{ marginTop: "25px" }}
               >
-                <label className="input-clf-label" style={{color: "red"}}>
+                <label className="input-clf-label" style={{color: "black", marginTop:"20px"}}>
                   **Please Sign Up To Continue Your Shopping
                 </label>
               </div>}

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import logo from "./logo.jpeg";
 import "../stylesheets/CompanyAllProducts.css"
@@ -28,7 +29,7 @@ export default function CompanyAllProducts() {
   };
   const fetchData = async () => {
     const response = await fetch(
-      "http://localhost:5000/velvethomes/selller/showallprods",
+      "http://localhost:5000/velvethomes/seller/showallprods",
       {
         method: "POST",
         headers: {
@@ -72,8 +73,8 @@ export default function CompanyAllProducts() {
               width: '95%',
               height: '80px',
               fontSize: '30px',
-              backgroundColor: '#F1C27B',
-              border: '7px solid #3F2305',
+              backgroundColor: '#f0efef',
+              border: '5px solid black',
               padding: '10px', borderRadius: '20px',
               margin: '5px'
             }} />
@@ -83,8 +84,12 @@ export default function CompanyAllProducts() {
           {objs.length===0 ? <div className='CAP-message'>0 Products Registered</div> : objs.map((o)=>(
             <div className='CLPCard'>
               <img src={o.images[0]} className='CLPCardImg' alt="" />
+              
+              
               <div className="CLP-Main">
+              <hr style={{color:"black", width:"90%"}}/>
                 <div className="CLP-title" style={{justifyContent: 'center'}}>{o.title}</div>
+                <hr style={{color:"black", width:"90%"}}/>
                 <div className="CLP-title">
                   <div className="CLP-title-head">Price: </div>
                   <div className="CLP-title-val">Rs. {o.price}/-</div>
@@ -100,6 +105,7 @@ export default function CompanyAllProducts() {
                 <div className="CLP-title">
                   <div className="CLP-title-head">Registered: </div>
                   <div className="CLP-title-val">{getDateString(o.registered)}</div>
+                  
                 </div>
                 <div className="CLP-card-btn-con">
                   <div className="CLP-card-btn">Edit</div>

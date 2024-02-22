@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../stylesheets/PinfoCustomer.css";
 import CustomerNavBar from "../Components/CustomerNavBar";
+import { json } from "react-router-dom";
 
 export default function PinfoCustomer() {
   const [cust, setCust] = useState({
@@ -16,6 +17,29 @@ export default function PinfoCustomer() {
   const [del, setDel] = useState({ date: "", month: "", year: "" });
   const [returnDate, setReturnDate] = useState();
   const [currentDate, setCurrentDate] = useState();
+  const [image, setImage] = useState(null);
+
+
+
+
+  const uploadImage = async (e) => {
+    e.preventDefault();
+    if (image) {
+      const data = new FormData();
+      data.append("file", image);
+      const username = localStorage.getItem("customerUsername");
+      try {
+        const resp = await fetch(`http://localhost:5000/customerProfile/upload/${username}`, {
+          method: "POST",
+          body: data
+        })
+        console.log(resp);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  }
+
 
   const fetchData = async () => {
     const response = await fetch(
@@ -66,6 +90,7 @@ export default function PinfoCustomer() {
     setReturnDate(d);
     setCurrentDate(new Date());
   };
+
   return (
     <>
       <CustomerNavBar />
@@ -73,7 +98,51 @@ export default function PinfoCustomer() {
         <div className="PinfoHead">My Details</div>
         <div className="PinfoCustInfo">
           <div className="PinfoCustInfoImgwrap">
-            <img src={cust.photo} className="PinfoCustInfoImg" alt="" />
+
+            <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+              {cust.photo && (
+                <img
+                src={`http://localhost:5000/customerProfile/images/${encodeURIComponent(cust.photo)}`}
+
+                  className="PinfoCustInfoImg"
+                  alt=""
+                />
+              )}
+
+            </button>
+            {/* <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src={`http://localhost:5000/velvethomes/customerProfile/images/${cust.photo}`} className="PinfoCustInfoImg" alt="" />
+            </button> */}
+
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h1 className="modal-title fs-5" id="exampleModalLabel">Chnage Photo</h1>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <div className="input-group mb-3">
+                      <input
+                        type="file"
+                        className="form-control"
+                        id="file"
+                        name="file"
+                        aria-describedby="inputFileAddon"
+                        accept=".png,.jpeg,jpg"
+                        onChange={(e) => { setImage(e.target.files[0]); }}
+                      />
+                      <label className="input-group-text" for="inputFile" >Choose Photo</label>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={uploadImage} >Upload Image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div className="PinfoCustMain">
             <div className="PinfoCustDiv">
@@ -180,29 +249,29 @@ export default function PinfoCustomer() {
                   {show.product.title}
                 </div>
                 <div className="PinfoOverlayMainDes">
-                  <div className="PinfoOverlayMainDesTitle">Order Id :- </div>
+                  <div className="PinfoOverlayMainDesTitle">Order Id : </div>
                   <div className="PinfoOverlayMainDesValue">{show._id}</div>
                 </div>
                 <div className="PinfoOverlayMainDes">
-                  <div className="PinfoOverlayMainDesTitle">Price :- </div>
+                  <div className="PinfoOverlayMainDesTitle">Price :</div>
                   <div className="PinfoOverlayMainDesValue">
                     Rs. {show.product.price} /unit
                   </div>
                 </div>
                 <div className="PinfoOverlayMainDes">
-                  <div className="PinfoOverlayMainDesTitle">Quantity :- </div>
+                  <div className="PinfoOverlayMainDesTitle">Quantity : </div>
                   <div className="PinfoOverlayMainDesValue">
                     {show.quantity}
                   </div>
                 </div>
                 <div className="PinfoOverlayMainDes">
-                  <div className="PinfoOverlayMainDesTitle">Code Used :- </div>
+                  <div className="PinfoOverlayMainDesTitle">Code Used :</div>
                   <div className="PinfoOverlayMainDesValue">
                     {show.couponcode}
                   </div>
                 </div>
                 <div className="PinfoOverlayMainDes">
-                  <div className="PinfoOverlayMainDesTitle">Discount :- </div>
+                  <div className="PinfoOverlayMainDesTitle">Discount : </div>
                   <div className="PinfoOverlayMainDesValue">
                     {show.discount}%
                   </div>
@@ -212,7 +281,7 @@ export default function PinfoCustomer() {
                     {show.status === "Pending"
                       ? "Amount To Be Paid"
                       : "Amount Paid"}{" "}
-                    :-{" "}
+                    :{" "}
                   </div>
                   <div className="PinfoOverlayMainDesValue">
                     Rs.{" "}
@@ -220,21 +289,21 @@ export default function PinfoCustomer() {
                       (show.quantity *
                         show.product.price *
                         (100 - show.discount)) /
-                        100
+                      100
                     )}{" "}
                     /-
                   </div>
                 </div>
                 <div className="PinfoOverlayMainDes">
                   <div className="PinfoOverlayMainDesTitle">
-                    Delivery Status :-{" "}
+                    Delivery Status :{" "}
                   </div>
                   <div className="PinfoOverlayMainDesValue">{show.status}</div>
                 </div>
                 {show.status === "Pending" && (
                   <div className="PinfoOverlayMainDes">
                     <div className="PinfoOverlayMainDesTitle">
-                      Expected Delivery Date :-{" "}
+                      Expected Delivery Date :{" "}
                     </div>
                     <div className="PinfoOverlayMainDesValue">
                       {del.date}/{del.month}/{del.year}
@@ -244,7 +313,7 @@ export default function PinfoCustomer() {
                 {show.status === "Delivered" && (
                   <div className="PinfoOverlayMainDes">
                     <div className="PinfoOverlayMainDesTitle">
-                      Delivery Date :-{" "}
+                      Delivery Date :{" "}
                     </div>
                     <div className="PinfoOverlayMainDesValue">
                       {del.date}/{del.month}/{del.year}

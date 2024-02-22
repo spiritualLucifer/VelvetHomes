@@ -4,60 +4,74 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://images.unsplash.com/photo-1566908829550-e6551b00979b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
     background-repeat: no-repeat no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
 .LoginFormAdmin{
+    border-radius: 20px;
     width: 60%;
     height: 75%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
 }
+
 .ImgBack{
-    width: 40%;
+    width: 43%;
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #080202cf;
+    background-color: #555;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    font-size: 50px;
+    font-size: 2rem;
     color: #fff;
     text-align: center;
 }
+
 .LoginFormCon{
     width: 55%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    margin-right: 10px;
 }
+
 .FormBtnHead{
     width: 180px;
     height: 60px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-large;
-    background-color: #FF7B54;
+    font-size: 100;
+    background-color: #666;
     color: white;
+}
+
+.FormAdminHead{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 .AdminLogin{
     margin-top: 15px;
-    background-color: #ffd6a5ae;
+    background-color: #bfbfbf;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 5px
+    border-radius: 5px;
+    border: 0.5px solid #999; 
+
 }
 .input-company-wrapper{
     width: 90%;
@@ -68,8 +82,9 @@
     flex-direction: column;
 }
 .input-clf-label{
-    font-size: x-large;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 2px;
     color: #553939;
 }

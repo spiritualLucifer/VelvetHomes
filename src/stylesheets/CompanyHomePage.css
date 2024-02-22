@@ -1,11 +1,12 @@
-.CompanyHomePage{
+
+.CompanyHomePage {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.TypingEffectCon{
+  }
+  .TypingEffectCon {
     width: 98%;
     display: flex;
     justify-content: center;
@@ -14,56 +15,56 @@
     min-height: 150px;
     margin: 1%;
     border-radius: 5px;
-}
-.CompanyAdvertiseSeller{
+  }
+  .CompanyAdvertiseSeller {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #884A39;
+    background-color: #884a39;
     height: 120px;
-    border-bottom: 3px solid gold;
+    /* border-bottom: 3px solid gold; */
     transition: height 0.5s;
-}
-.CompanyAdvertiseSeller img{
+  }
+  .CompanyAdvertiseSeller img {
     height: 70px;
-    width:  100px;
+    width: 100px;
     border: 1.5px solid aliceblue;
     border-radius: 3px;
-}
-.SelllerBrandName{
+  }
+  .SelllerBrandName {
     color: #fff;
     font-size: larger;
     margin-left: 10px;
-}
-.SelllerBrandName span{
+  }
+  .SelllerBrandName span {
     font-size: xx-large;
-}
-.CompanyHomeMainContent{
+  }
+  .CompanyHomeMainContent {
     width: 100%;
     height: 600px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     transition: height 0.5s;
-}
-.CompanyHomeMainContent::-webkit-scrollbar{
+    background-color: white;
+  }
+  .CompanyHomeMainContent::-webkit-scrollbar {
     display: none;
-}
-.CHPImgCon{
+  }
+  .CHPImgCon {
     width: 80px;
     height: 80px;
     margin-left: 5px;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
-}
-.CompDetails{
+  }
+  .CompDetails {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
-.CHPcard{
-    background-color: #F9E0BB;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+  }
+  .CHPcard {
+    /* background-color: #f9e0bb; */
+  
     height: 175px;
     width: 250px;
     display: flex;
@@ -71,84 +72,71 @@
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
-}
-.CHPcardMain{
+  }
+  .CHPcardMain {
     width: 100%;
     height: 140px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-}
-.CHPImage{
+  }
+  .CHPImage {
     width: 90px;
     height: 40px;
     z-index: 6666;
-}
-.CHPcardMainDivTitle{
+  }
+  .CHPcardMainDivTitle {
     font-size: xx-large;
-    color: #3F2305;
+    color: #3f2305;
     margin-left: 5px;
-}
-.CHPcardMainDiv{
+  }
+  .CHPcardMainDiv {
     width: 98%;
     margin-top: 15px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-.CHPcardMainDivHead{
+  }
+  .CHPcardMainDivHead {
     font-size: x-large;
     margin-left: 5px;
     color: #482121;
-}
-.CHPcardMainDivValue{
+  }
+  .CHPcardMainDivValue {
     font-size: larger;
     margin-left: 4px;
-    color: #7A3E3E;
-}
-.CHPcardCon{
+    color: #7a3e3e;
+  }
+  .CHPcardCon {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
     margin-top: 25px;
     margin-bottom: 25px;
-}
-.CompTrackSalesHead{
-    width: 350px;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
-    border-bottom: 5px double #F9E0BB;
-    border-right: 2px solid #F9E0BB;
-    font-size: 50px;
-    margin-top: 15px;
-    margin-left: 15px;
-    color: #482121;
-    display: flex;
-    text-decoration: underline;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-.CompTrackSalesMain{
+  }
+  
+  .CompTrackSalesMain {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 5px;
-}
-.SalesChartCon{
+    box-shadow: none;
+  }
+  .SalesChartCon {
     width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-color: #F9E0BB;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 5px;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
-}
-.CompTrackSalesDiv{
+  }
+  .CompTrackSalesDiv {
     width: 45%;
     height: 200px;
     height: 550px;
@@ -156,41 +144,44 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-}
-.CompTrackSalesProdsCon{
+  }
+  .CompTrackSalesProdsCon {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 50px;
     margin-top: 50px;
-}
-.CHPprodCard{
+  }
+  .CHPprodCard {
     width: 400px;
     height: 200px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #F9E0BB;
-    border-radius: 5px;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    /* box-shadow: 15px 17px 20px rgba(0, 0, 0, 0.3); */
     margin: 5px;
-}
-.CHPprodCard img{
+  }
+  .CHPprodCard img {
     height: 150px;
     width: 150px;
-}
-.CHPprodCardMain{
+  }
+  .CHPprodCardMain {
     width: 210px;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
-}
-.CHPprodCardMainTitle{
+  }
+  .CHPprodCardMainTitle {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
+  }
+  
+  

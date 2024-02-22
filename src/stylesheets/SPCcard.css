@@ -34,8 +34,7 @@
     -webkit-perspective: 230px;
     perspective: 230px;
   }
-  .btn-12 span {
-    /* background: linear-gradient(0deg, #865439e3 0%, #c68c59e6 100%); */
+  /* .btn-12 span {
     background: linear-gradient(0deg, grey 0%, lightgrey 100%);
     display: block;
     position: absolute;
@@ -47,7 +46,20 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     font-size: larger;
-  }
+  } */
+
+  .btn-12 span {
+    background: rgba(0, 0, 0, 0.726);
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    transition: all .3s;
+    font-size: larger;
+}
   .btn-12 span:nth-child(1) {
     -webkit-transform: rotateX(90deg);
     -moz-transform: rotateX(90deg);

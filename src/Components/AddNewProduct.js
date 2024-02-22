@@ -86,12 +86,13 @@ export default function AddNewProduct() {
           const json = await response.json();
           if (json.success) {
             const id = json._id;
-            navigate(`/velvethomes/showproduct/${id}`);
+            navigate(`velvethomes/showproduct/${id}`);
           }
     }
   return (
     <div className='cnp-body-wrapper'>
       <form action="" onSubmit={handleNewElementSubmit} className='cnp-body-form'>
+        <h1 style={{color:"black"}}>Add a new product</h1>
         <div className='cnp-wrapper'>
             <label htmlFor="cnp-title">Title Of The Product : </label>
             <input 
@@ -193,7 +194,7 @@ export default function AddNewProduct() {
         <div className="cnp-wrapper">
             <label htmlFor="cnp-img">Give URL Of The Images : </label>
             {formData.cnpImages.map((e,ind)=>(
-                <div className='cnpTextWrapperIcon'>
+                <div className='cnpTextWrapperIcon'  style={{display:"flex",alignItems:"center"}}>
                     <input type='text' name='cnpImages' className='cnp-input-icon' style={{marginRight: '0px'}} onChange={(evt)=>handleArrayChange(evt,ind)} value={e} key={ind} />
                     <img src="https://tl.vhv.rs/dpng/s/481-4811206_delete-icon-png-free-download-delete-icon-for.png" onClick={(e)=>{
                         setFormData({
@@ -203,16 +204,16 @@ export default function AddNewProduct() {
                             })
                         })
                     }}  className='cnp-icons' alt="" />
-                </div>
-            ))}
             <span className='cnpAddNewBox' onClick={()=>{
                 setFormData({...formData,cnpImages: [...formData.cnpImages,""]})
             }}>+</span>
+                </div>
+            ))}
         </div>
         <div className="cnp-wrapper">
             <label htmlFor="cnp-keyPoints">Give Some Key Points About The Product : </label>
             {formData.cnpKeyPoints.map((e,ind)=>(
-                <div className="cnpTextWrapperIcon">
+                <div className="cnpTextWrapperIcon" style={{display:"flex",alignItems:"center"}}>
                     <input type="text" name='cnpKeyPoints' className='cnp-input-icon' onChange={(evt)=>handleArrayChange(evt,ind)} value={e} key={ind}/>
                     <img src="https://tl.vhv.rs/dpng/s/481-4811206_delete-icon-png-free-download-delete-icon-for.png" style={{height: '27px'}} onClick={(e)=>{
                         setFormData({
@@ -222,20 +223,20 @@ export default function AddNewProduct() {
                             })
                         })
                     }}    className='cnp-icons' alt="" />
-                </div>
-            ))}
-            <span className='cnpAddNewBox' onClick={()=>{
+            <span  className='cnpAddNewBox' onClick={()=>{
                 setFormData({...formData,cnpKeyPoints: [...formData.cnpKeyPoints,""]})
             }}>+</span>
+                </div>
+            ))}
         </div>
         <div className="cnp-wrapper">
             <label htmlFor="">Enter Some features Of The Product (e.g: - "color","size","design-type"... )</label>
             <div className="cnp-feature">
                 {
                     formData.cnpFeaturesKeys.map((e,ind)=>{
-                        return <div className='cnpTextWrapperIcon'>
-                            <input type="text" value={e} className='cnp-key' onChange={(evt)=>handleArrayChange(evt,ind)} style={{border: 'none'}} name='cnpFeaturesKeys'/> : 
-                            <input type="text" value={formData.cnpFeaturesValues[ind]} onChange={(evt)=>handleArrayChange(evt,ind)} style={{border: 'none'}} className='cnp-value' name='cnpFeaturesKeysValues'/>
+                        return <div className='cnpTextWrapperIcon'  style={{display:"flex",alignItems:"center"}}>
+                            <input type="text" value={e} className='cnp-key' onChange={(evt)=>handleArrayChange(evt,ind)} style={{border: '1px solid black'}} name='cnpFeaturesKeys'/> : 
+                            <input type="text" value={formData.cnpFeaturesValues[ind]} onChange={(evt)=>handleArrayChange(evt,ind)} style={{border: '1px solid black'}} className='cnp-value' name='cnpFeaturesKeysValues'/>
                             <img src="https://tl.vhv.rs/dpng/s/481-4811206_delete-icon-png-free-download-delete-icon-for.png" style={{height: '27px'}} onClick={(e)=>{
                         setFormData({
                             ...formData,
@@ -247,13 +248,13 @@ export default function AddNewProduct() {
                             })
                         })
                     }}   className='cnp-icons' alt="" />
+                <span className='cnpAddNewBox' onClick={()=>{
+                    setFormData({...formData,cnpFeaturesKeys: [...formData.cnpFeaturesKeys,""],cnpFeaturesValues: [...formData.cnpFeaturesValues,""]})
+                }}>+</span>
                         </div>
                     })
                 }
             </div>
-                <span className='cnpAddNewBox' onClick={()=>{
-                    setFormData({...formData,cnpFeaturesKeys: [...formData.cnpFeaturesKeys,""],cnpFeaturesValues: [...formData.cnpFeaturesValues,""]})
-                }}>+</span>
         </div>
         <button className='cnp-btn'>Register</button>
       </form>

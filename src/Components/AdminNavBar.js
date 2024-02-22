@@ -1,7 +1,8 @@
+
 import React from 'react'
 import "../stylesheets/CompanyNavBar.css"
 import logo from "../Components/logo.jpeg"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { logout } from '../features/login/loginSlice';
 
@@ -15,9 +16,11 @@ export default function AdminNavBar({ navTitle }) {
     dispatch(logout());
   }
   return (
-    <div className="cm-nav" style={{ backgroundColor: '#001C30' }}>
-      <div className="comp-nav-head" style={{ backgroundColor: '#071952', marginTop: '0px', borderRadius: '0px', width: '100%' }}>
-        <img src={logo} alt="" />
+    <div className="cm-nav">
+      <div className="comp-nav-head" >
+      <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
         <div className="comp-nav-head-item">
           Velvet Homes
         </div>

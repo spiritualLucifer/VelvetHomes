@@ -1,3 +1,4 @@
+
 .BNB-main{
     width: 100%;
     display: flex;
@@ -12,7 +13,7 @@
     align-items: center;
     margin-top: 100px;
     height: 60px;
-    background-color: #7E1717;
+
     color: #fff;
     font-size: x-large;
 }
@@ -37,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid white;
+
 }
 .BNB-body{
     width: 80%;
@@ -63,7 +64,7 @@
 .BNB-body-p-img{
     width: 23%;
     height: 100px;
-    border: 1px dashed #7E1717;
+
     margin-right: 20px;
 }
 .BNB-body-p-title{
@@ -175,3 +176,54 @@
     font-size: larger;
     color: #3D0C11;
 }
+/* ... Your existing styles ... */
+
+.BNB-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 100px;
+  }
+  
+  .BNB-table th, .BNB-table td {
+    
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .BNB-table th{
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  .BNB-product {
+    display: flex;
+    align-items: center;
+  }
+  
+  .BNB-product-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+  
+  .BNB-product-title {
+   font-size: large;
+    text-align: center;
+  }
+  
+  .BNB-quantity {
+    flex-direction: column;
+  }
+  
+  .BNB-quantity-input {
+    border-radius: 2px !important;
+    width: 60px;
+  }
+  
+  .BNB-alert {
+    font-size: large;
+    margin-top: 10px;
+    color: red;
+  }
+  
+

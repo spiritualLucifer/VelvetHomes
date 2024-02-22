@@ -1,44 +1,49 @@
-.CompanyAllProducts{
+
+.CompanyAllProducts {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-.CompanyAdvertiseSeller{
+  }
+  .CompanyAdvertiseSeller {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #884A39;
+    background-color: black;
+    color: white;
     height: 120px;
-    border-bottom: 3px solid gold;
+    /* border-bottom: 3px solid gold; */
     transition: height 0.5s;
-}
-.CompanyAdvertiseSeller img{
+  }
+  .CompanyAdvertiseSeller img {
     height: 70px;
-    width:  100px;
+    width: 100px;
     border: 1.5px solid aliceblue;
     border-radius: 3px;
-}
-.SelllerBrandName{
-    color: #fff;
+  }
+  .SelllerBrandName {
+    color: white;
     font-size: larger;
     margin-left: 10px;
-}
-.SelllerBrandName span{
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  .SelllerBrandName span {
     font-size: xx-large;
-}
-.CompanyAllProductsMain{
+  }
+  .CompanyAllProductsMain {
     width: 100%;
     height: 600px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-}
-.CompanyAllProductsMain::-webkit-scrollbar{
+    background-color: white;
+  }
+  .CompanyAllProductsMain::-webkit-scrollbar {
     display: none;
-}
-.TypingEffectCon{
+  }
+  .TypingEffectCon {
     width: 98%;
     display: flex;
     justify-content: center;
@@ -47,98 +52,92 @@
     min-height: 150px;
     margin: 1%;
     border-radius: 5px;
-}
-.CompTrackSalesHead{
-    width: 350px;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
-    border-bottom: 5px double #F9E0BB;
-    border-right: 2px solid #F9E0BB;
-    font-size: 50px;
-    margin-top: 15px;
-    margin-left: 15px;
-    color: #482121;
-    display: flex;
-    text-decoration: underline;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-.CompTrackSalesProdsCon{
+  }
+  
+  .CompTrackSalesProdsCon {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 50px;
     margin-top: 50px;
-}
-.CLPCard{
+  }
+  .CLPCard {
     width: 250px;
     height: 450px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    box-shadow: 15px 17px 20px rgba(0,0,0,0.3);
-    background-color: #EAAC7F;
+    /* box-shadow: 15px 17px 20px rgba(0, 0, 0, 0.3); */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #eaac7f;
     margin: 15px;
     border-radius: 5px;
-}
-.CLPCardImg{
+  }
+  .CLPCardImg {
     width: 100%;
     height: 220px;
     background-color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-.CLP-Main{
+  }
+  .CLP-Main {
     width: 100%;
     height: 230px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-}
-.CLP-title{
+    background-color: white;
+  }
+  .CLP-title {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    font-size: larger;
-    color: #333;
+    font-size: 1.1rem;
+    color: black;
     margin-top: 3px;
-}
-.CLP-title-head{
+    font-family: monospace;
+    margin-bottom: 2px;
+  }
+  .CLP-title-head {
+    margin: 0px;
     margin-left: 7px;
-    font-size: 18px;
+    font-size: 17px;
     color: #444;
-}
-.CLP-title-val{
+  }
+  .CLP-title-val {
     margin-left: 3px;
-    font-size: 20px;
+    font-size: 17px;
     color: #555;
-}
-.CLP-card-btn-con{
+  }
+  .CLP-card-btn-con {
     width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.CLP-card-btn{
-    width: 100px;
-    height: 40px;
+  }
+  .CLP-card-btn {
+    width: 70px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #482121;
+    /* background-color: #482121; */
+    background-color: rgba(0, 0, 0, 0.871);
     color: #fff;
-    font-size: x-large;
+    /* font-size: x-large; */
     cursor: pointer;
     margin-left: 15px;
     border-radius: 5px;
     transition: background-color 0.5s;
-}
-.CLP-card-btn:hover{
-    background-color: #482121ce;
-}
+  }
+  .CLP-card-btn:hover {
+    background-color: black;
+  }
+  
+  

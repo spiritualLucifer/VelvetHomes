@@ -1,7 +1,10 @@
+
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import logo from "./logo.jpeg"
 import "../stylesheets/AdminHomePage.css"
 import SalesChart from './SalesChart';
+import loader from '../Pictures/loader.gif'
 
 export default function AdminHomePage() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +24,7 @@ export default function AdminHomePage() {
     });
     const [cust, setCust] = useState([]);
     const [sales, setSales] = useState([]);
-    const [showSales,setShowSales] = useState([]);
+    const [showSales, setShowSales] = useState([]);
     const [dc, setDc] = useState([]);
     const [mostSeller, setMostSeller] = useState([]);
     const [leastSeller, setLeastSeller] = useState([]);
@@ -31,7 +34,7 @@ export default function AdminHomePage() {
         to: "ALL",
         specific: ""
     })
-    const handleSubmit = async(evt)=>{
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
         const response = await fetch(
             "http://localhost:5000/velvethomes/admin/discountcode",
@@ -43,24 +46,24 @@ export default function AdminHomePage() {
                 body: JSON.stringify({
                     code: formData.code,
                     discountpercent: formData.discountpercent,
-                    to : formData.to
+                    to: formData.to
                 }),
             }
         );
         const json = await response.json();
-        if(json.success){
-            setDc([...dc,json.code])
+        if (json.success) {
+            setDc([...dc, json.code])
             setFormData({
                 code: "",
                 discountpercent: '',
                 to: "ALL",
                 specific: ""
             })
-        }else{
+        } else {
             alert("An error occured")
         }
     }
-    const deleteCode = async(id)=>{
+    const deleteCode = async (id) => {
         alert(id)
         const response = await fetch(
             "http://localhost:5000/velvethomes/admin/deletediscountcode",
@@ -75,7 +78,7 @@ export default function AdminHomePage() {
             }
         );
         const json = await response.json();
-        if(json.success){
+        if (json.success) {
             setDc(json.dc);
         }
     }
@@ -101,7 +104,7 @@ export default function AdminHomePage() {
                 totalProfit: json.admin.totalProfit
             })
             setSales(json.sales)
-            setShowSales(json.sales.reverse().splice(0,3));
+            setShowSales(json.sales.reverse().splice(0, 3));
             setDc(json.discountcode)
             setMostSeller(json.mostSeller)
             setLeastSeller(json.leastSeller)
@@ -172,20 +175,22 @@ export default function AdminHomePage() {
             }
         }
     }
-    const handleChange = (e)=>{
-        setFormData({...formData,[e.target.name]: e.target.value})
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
     }
     return (
         <div className='AdminHomePage'>
             {showLoader ? <div className="AdminLoadercon">
-                <img src='https://i.gifer.com/70bm.gif' alt='' className='AdminLoader' />
+                <img src={loader} alt='' className='AdminLoader' />
                 <span className='AdminLoaderText'>
                     Velvet Home's Page Is Loading...
                 </span>
             </div> :
                 <div className="FullPage">
                     <div className="AdminAdvertise" style={isScrolled ? { height: '95px' } : { height: '120px' }}>
-                        <img src={logo} alt="" />
+                        <Link to="/">
+                            <img src={logo} alt="" />
+                        </Link>
                         <div className="AdminBrandName"><span>Velvet Home's Admin's Page</span></div>
                     </div>
                     <div className="AdminHomeMainContent" onScroll={handleScroll} style={isScrolled ? { height: '621px' } : { height: '596px' }}>
@@ -252,12 +257,12 @@ export default function AdminHomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="CompTrackSalesHead" id='CompTrackSalesID'>Sales Report</div>
+                        <div className="CompTrackSalesHea" id='CompTrackSalesID' style={{ fontSize: "50px", borderBottom: "1px dashed black", backgroundColor: "none", borderRadius: "none", maxWidth: "fit-content", marginLeft: "40px" }}>Sales Report</div>
                         <div className="SalesChartsCon">
                             <div className="SalesChartConDiv"><SalesChart data={data} /></div>
                             <div className="SalesChartConDiv"><SalesChart data={profitData} yDateKey='profit' /></div>
                         </div>
-                        <div className="CompTrackSalesHead" id='CompTrackSalesID' style={{fontSize: '35px'}}>Recently Sold Products</div>
+                        <div className="CompTrackSalesHea" id='CompTrackSalesID' style={{ fontSize: "50px", borderBottom: "1px dashed black", backgroundColor: "none", borderRadius: "none", maxWidth: "fit-content", marginLeft: "40px" }}>Recently Sold Products</div>
                         <div className="SalesChartsCon">
                             {showSales.length === 0 ? <div>No Element Sold</div> :
                                 showSales.map((s) => {
@@ -338,7 +343,7 @@ export default function AdminHomePage() {
                                 <div className="SalesChartsCon">
                                     {dc.map((s) => (
                                         <div className="CHPcard" key={s._id}>
-                                            <div className="CHPcardMain" style={{height: '160px'}}>
+                                            <div className="CHPcardMain" style={{ height: '160px' }}>
                                                 <div className="CHPcardMainDiv">
                                                     <div className="CHPcardMainDivTitle">{s.code}</div>
                                                 </div>
@@ -349,7 +354,7 @@ export default function AdminHomePage() {
                                                     <div className="CHPcardMainDivValue">Applicable To:  {s.to}</div>
                                                 </div>
                                                 <div className="CHPcardMainDiv">
-                                                    <div className="CHPcardBtn" onClick={()=>deleteCode(s._id)}>Remove Code</div>
+                                                    <div className="CHPcardBtn" onClick={() => deleteCode(s._id)}>Remove Code</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,11 +369,11 @@ export default function AdminHomePage() {
                                             <label htmlFor="code" className='AdminInputLabel'>Enter Code: </label>
                                             <input type="text" onChange={handleChange} placeholder='Code' id='code' value={formData.code} name='code' className='AdminHomeText' required />
                                         </div>
-                                        <div className="AdminInputCon" style={{flexDirection: 'row'}}>
+                                        <div className="AdminInputCon" style={{ flexDirection: 'row' }}>
                                             <label htmlFor="dp" className='AdminInputLabel'>Enter Discount Percent: </label>
                                             <input type="number" onChange={handleChange} min={1} max={100} id='dp' name='discountpercent' value={formData.discountpercent} placeholder='Discount Percent' className='AdminHomeNumber' />
                                         </div>
-                                        <div className="AdminInputCon" style={{flexDirection: 'row'}}>
+                                        <div className="AdminInputCon" style={{ flexDirection: 'row' }}>
                                             <label htmlFor="to" className='AdminInputLabel'>Applicable To: </label>
                                             <select name="to" onChange={handleChange} value={formData.to} id="to">
                                                 <option value="ALL">ALL</option>

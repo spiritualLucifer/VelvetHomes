@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react'
 import TypingEffect from "../Components/TypingEffect";
 import "../stylesheets/CompanyHomePage.css"
@@ -160,8 +161,8 @@ export default function CompanyHomePage() {
                             width: '95%',
                             height: '80px',
                             fontSize: '30px',
-                            backgroundColor: '#F1C27B',
-                            border: '7px solid #3F2305',
+                            backgroundColor: '#F0EFEF',
+                            border: '5px solid black',
                             padding: '10px', borderRadius: '20px',
                             margin: '5px'
                         }} />

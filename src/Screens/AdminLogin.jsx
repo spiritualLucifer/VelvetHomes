@@ -103,8 +103,8 @@ export default function AdminLogin() {
                 value={compStateLogin.username}
                 style={
                   isValidInput.username
-                    ? { color: "#1A5D1A", borderBottom: "3px solid #1A5D1A" }
-                    : { color: "red", borderBottom: "3px solid red" }
+                    ? { color: "#1A5D1A", borderBottom: "1px solid #1A5D1A" }
+                    : { color: "red", borderBottom: "1px solid red" }
                 }
               />
               <div
@@ -116,7 +116,7 @@ export default function AdminLogin() {
                 }}
               >
                 {isValidInput.username ? (
-                  <div style={{ color: "#1A5D1A", fontWeight: "600" }}>
+                  <div style={{ color: "#1A5D1A", fontWeight: "400" }}>
                     Seems Good
                   </div>
                 ) : (
@@ -146,12 +146,12 @@ export default function AdminLogin() {
                       isValidInput.password
                         ? {
                             color: "#1A5D1A",
-                            borderBottom: "3px solid #1A5D1A",
+                            borderBottom: "1px solid #1A5D1A",
                             width: "95%",
                           }
                         : {
                             color: "red",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             width: "95%",
                           }
                     }
@@ -174,9 +174,9 @@ export default function AdminLogin() {
                             cursor: "pointer",
                           }
                         : {
-                            height: "27px",
+                            height: "25px",
                             width: "8%",
-                            borderBottom: "3px solid red",
+                            borderBottom: "1px solid red",
                             backgroundColor: "#ffffffae",
                             marginTop: "5px",
                             cursor: "pointer",
@@ -196,7 +196,7 @@ export default function AdminLogin() {
                   }}
                 >
                   {isValidInput.password ? (
-                    <div style={{ color: "#1A5D1A", fontWeight: "600" }}>
+                    <div style={{ color: "#1A5D1A", fontWeight: "400" }}>
                       Seems Good
                     </div>
                   ) : (

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import AdminHomePage from './AdminHomePage'
 import AdminAllCustomers from './AdminAllCustomers'
@@ -22,7 +23,7 @@ export default function AdminHomeMain({element}) {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                backgroundColor: "#75C2F6"
+                backgroundColor: "#ebe8e269"
             }}>
 
                 {element==="home" && <AdminHomePage/>}
@@ -34,3 +35,4 @@ export default function AdminHomeMain({element}) {
         </div>
   )
 }
+

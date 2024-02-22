@@ -1,6 +1,8 @@
+
 import React, { useEffect, useState } from 'react'
 import logo from "./logo.jpeg"
 import "../stylesheets/AdminHomePage.css"
+import loader from '../Pictures/loader.gif'
 
 
 export default function AdminAllCustomers() {
@@ -46,7 +48,7 @@ export default function AdminAllCustomers() {
     return (
         <div className='AdminHomePage'>
             {showLoader ? <div className="AdminLoadercon">
-                <img src='https://i.gifer.com/70bm.gif' alt='' className='AdminLoader' />
+                <img src={loader} alt='' className='AdminLoader' />
                 <span className='AdminLoaderText'>
                     Velvet Home's Customer's Page Is Loading...
                 </span>
