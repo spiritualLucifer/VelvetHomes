@@ -300,8 +300,8 @@ export default function AdminHomePage() {
                                 <div className="CompTrackSalesHead" id='CompTrackSalesID' style={{ fontSize: 'xx-large', height: '60px' }}>Most Selling Comp.</div>
                                 <div className="SalesChartsCon">
                                     {mostSeller.map((s) => (
-                                        <div className="CHPcard" key={s._id}>
-                                            <div className="CHPcardMain">
+                                        <div className="CHPcard" key={s._id} style={{height:"170px",margin:"0",padding:"0"}}>
+                                            <div className="CHPcardMain" style={{height:"170px",marginTop:"0",paddingTop:"5px"}}>
                                                 <div className="CHPcardMainDiv">
                                                     <div className="CHPcardMainDivTitle">{s.companyname}</div>
                                                 </div>

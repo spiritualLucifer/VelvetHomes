@@ -86,7 +86,7 @@ export default function AddNewProduct() {
           const json = await response.json();
           if (json.success) {
             const id = json._id;
-            navigate(`velvethomes/showproduct/${id}`);
+            navigate(`velvethomes/seller/allproducts`);
           }
     }
   return (

@@ -136,7 +136,7 @@ export default function AdminDeliveries() {
                         setShowDelDetail()
                     }}>&times;</div>
                 </div>
-                <div className="PinfoOverlayMain" style={{ backgroundColor: '#A6F6FF' }}>
+                <div className="PinfoOverlayMain" style={{ backgroundColor: "#d7d5d3" }}>
                     <div className="PinfoOverlayImgWrapper">
                         <img src={showDelDetail.product.images[0]} className='PinfoOverlayImg' alt="" />
                     </div>
@@ -175,7 +175,7 @@ export default function AdminDeliveries() {
                             <div className="PinfoOverlayMainDesValue">{del.date}/{del.month}/{del.year}</div>
                         </div>}
                         {showDelDetail.status === "Pending" && <div className='PinfoOverlayBtn'>
-                            <div className="PinfoOverlayBtnMain" onClick={() => deliver(showDelDetail._id)} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>Mark As Delivered</div>
+                            <div className="PinfoOverlayBtnMain" onClick={() => deliver(showDelDetail._id)} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center',height:"60px",marginTop:"30px" }}>Mark As Delivered</div>
                         </div>}
                     </div>
                 </div>

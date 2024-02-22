@@ -71,8 +71,8 @@ export default function AdminAllCompanies() {
                         <div className="AdminAllCustomersMain">
                             {show.length === 0 && <div className='AdminAllCustomersNotFound'>No Result Found</div>}
                             {show.map((s) => (
-                                <div className="CHPcard" style={{ justifyContent: 'center' }} key={s._id}>
-                                    <div className="CHPcardMain">
+                                <div className="CHPcard" style={{ height:"250px",justifyContent: 'center' }} key={s._id}>
+                                    <div className="CHPcardMain" style={{ height:"250px",justifyContent: 'center' }}>
                                         <div className="CHPcardMainDiv">
                                             <div className="CHPcardMainDivTitle">{s.companyname}</div>
                                         </div>

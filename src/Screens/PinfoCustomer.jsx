@@ -29,11 +29,15 @@ export default function PinfoCustomer() {
       data.append("file", image);
       const username = localStorage.getItem("customerUsername");
       try {
-        const resp = await fetch(`http://localhost:5000/customerProfile/upload/${username}`, {
+        const res = await fetch(`http://localhost:5000/customerProfile/upload/${username}`, {
           method: "POST",
           body: data
         })
-        console.log(resp);
+        if(res.ok){
+          fetchData();
+        }else{
+          console.log('problem  with file uploading');
+        }
       } catch (error) {
         console.log(error)
       }
@@ -99,7 +103,7 @@ export default function PinfoCustomer() {
         <div className="PinfoCustInfo">
           <div className="PinfoCustInfoImgwrap">
 
-            <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+            {/* <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
               {cust.photo && (
                 <img
                 src={`http://localhost:5000/customerProfile/images/${encodeURIComponent(cust.photo)}`}
@@ -109,10 +113,10 @@ export default function PinfoCustomer() {
                 />
               )}
 
-            </button>
-            {/* <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <img src={`http://localhost:5000/velvethomes/customerProfile/images/${cust.photo}`} className="PinfoCustInfoImg" alt="" />
             </button> */}
+            <button type="button" style={{ backgroundColor: "#c2c3c0", border: "1px solid black", borderRadius: "50%", border: "none" }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src={`http://localhost:5000/customerProfile/images/${cust.photo}`} className="PinfoCustInfoImg" alt="" />
+            </button>
 
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div className="modal-dialog">
